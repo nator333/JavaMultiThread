@@ -1,4 +1,4 @@
-package jp.mixi.practice.java;
+package practice;
 
 public class SomeModel {
     public void doSomethingRandom(Callback callback) {

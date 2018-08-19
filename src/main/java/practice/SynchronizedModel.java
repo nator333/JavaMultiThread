@@ -1,4 +1,4 @@
-package jp.mixi.practice.java;
+package practice;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

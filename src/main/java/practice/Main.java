@@ -1,6 +1,5 @@
-package jp.mixi.practice.java;
+package practice;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
@@ -11,7 +10,7 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.println("Start practice program...");
-    System.out.println("Main Started --- ThreadId = " + Thread.currentThread().getId());
+    System.out.println("Main Started --- Thread Id : " + Thread.currentThread().getId());
     SomeModel model1 = new SomeModel();
 //        // TODO: [課題1]以下のコメントアウトを外し、適切にコールバックオブジェクトを渡す
 //        // TODO: [課題2]コールバックの onSuccess, onFailure で、標準出力にそれぞれのメソッド名を表示する
@@ -38,28 +37,28 @@ public class Main {
     model3 = new SynchronizedModel();
 
     Runnable runnable1 = () -> {
-      System.out.println("runnable1 Started --- ThreadId = " + Thread.currentThread().getId());
+      System.out.println("runnable1 Started --- Thread Id : " + Thread.currentThread().getId());
       for (int i = 0; i < 5; i++) {
         // TODO: [課題4]model3 の doSomething() を呼び出す
         try {
           Thread.sleep(10);
         } catch (InterruptedException e) {
           e.printStackTrace();
-          System.exit(9);
+          //System.exit(9);
         }
         model3.doSomething("runnable1");
       }
     };
 
     Runnable runnable2 = () -> {
-      System.out.println("runnable2 Started --- ThreadId = " + Thread.currentThread().getId());
+      System.out.println("runnable2 Started --- Thread Id : " + Thread.currentThread().getId());
       for (int i = 0; i < 5; i++) {
         // TODO: [課題5]model3 の doSomething() を呼び出す
         try {
           Thread.sleep(10);
         } catch (InterruptedException e) {
           e.printStackTrace();
-          System.exit(9);
+          //System.exit(9);
         }
         model3.doSomething("runnable2");
       }
@@ -91,7 +90,7 @@ public class Main {
     }
 
     scheduledExecutorService.shutdown();
-    System.out.println("Main finished --- ThreadId = " + Thread.currentThread().getId());
+    System.out.println("Main finished --- Thread Id : " + Thread.currentThread().getId());
 
 
   }
