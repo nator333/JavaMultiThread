@@ -1,2 +1,3 @@
 # Purpose
-  check thread function
+- check thread function
+- run Gradle tasks
