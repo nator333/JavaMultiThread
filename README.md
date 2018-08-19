@@ -1,1 +1,2 @@
-JavaMultiThread
+# Purpose
+  check thread function
