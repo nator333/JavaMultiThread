@@ -6,6 +6,7 @@
 - Runnable interface
 - Thread class
 - Synchronization method
+- AtomicInteger class
 - ExcutorService interface
 - Future class
 
