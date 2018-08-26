@@ -2,6 +2,13 @@
 - check thread function
 - run Gradle tasks
 
+# Main Class and Technology
+- Runnable interface
+- Thread class
+- Synchronization method
+- ExcutorService interface
+- Future class
+
 # Expected output
 
 ```
